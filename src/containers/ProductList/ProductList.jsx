@@ -1,24 +1,26 @@
 import React from 'react';
 
 // components
-import ProductItem from '../components/ProductItem';
-import UseGetProducts from '../hooks/useGetProducts';
+import ProductItem from '../../components/ProductItem/ProductItem';
+
+// hooks
+import useGetProducts from '../../Hooks/useGetProducts';
 
 // styles
-import '../styles/ProductList.scss';
-
-const API = 'https://api.escuelajs.co/api/v1/products';
+import './ProductList.scss';
+ 
+const API = "https://api.escuelajs.co/api/v1/products";
 
 const ProductList = () => {
 
-	const products = UseGetProducts(API)
+	const products = useGetProducts(API);
 	
 	return (
 		<section className="main-container">
 			<div className="ProductList">
-				{products.map(product=>
-					(<ProductItem product={product} key={product.id}/>)
-				)}
+				{products.map((product) => {
+					return <ProductItem product={product} key={product.id}/>;
+				})}
 			</div>
 		</section>
 	);
