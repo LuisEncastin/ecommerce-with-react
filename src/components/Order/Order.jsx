@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Order.scss';
+import './Order.scss';
 
 const Order = () => {
 	return (
@@ -9,7 +9,7 @@ const Order = () => {
 				<span>6 articles</span>
 			</p>
 			<p>$560.00</p>
-			<img src="./icons/flechita.svg" alt="arrow" />
+			<img src="../../assets/icons/flechita.svg" alt="arrow" />
 		</div>
 	);
 }
