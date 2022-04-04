@@ -1,6 +1,5 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import './Login.scss';
-
 
 const Login = () => {
 
@@ -13,6 +12,7 @@ const Login = () => {
 			username: formData.get('email'),
 			password: formData.get('password')
 		}
+		console.log(data);
 	};
 
 	return (
@@ -24,12 +24,12 @@ const Login = () => {
 					<input type="text" name="email" placeholder="platzi@example.cm" className="input input-email" />
 					<label htmlFor="password" className="label">Password</label>
 					<input type="password" name="password" placeholder="*********" className="input input-password" />
-					<input 
+					<button 
 					onClick={handleSubmit}
-					className="primary-button login-button" />
+					className="primary-button login-button">Log in</button>
 					<a href="/">Forgot my password</a>
 				</form>
-				<button className="secondary-button signup-button" >Sign up</button>
+				<button className="secondary-button signup-button" onClick={handleSubmit} >Sign up</button>
 			</div>
 		</div>
 	);
